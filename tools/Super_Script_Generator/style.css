@@ -1,0 +1,217 @@
+/*               New navbar stuff           */
+/* @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"); */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#nav {
+  height: 3rem;
+}
+nav {
+  display: flex;
+  height: 3rem;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+}
+nav .logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #000;
+  background: #f1f6f9;
+}
+nav .menu-btn svg {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 0.5rem;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn svg {
+    display: block;
+  }
+  #click:checked ~ .menu-btn svg:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 48px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #f1f6f9;
+  }
+}
+nav.sticky {
+  background: #000;
+  position: fixed;
+}
+nav.sticky ul li a {
+  color: #fff;
+}
+.logo {
+  color: #fff;
+  text-shadow: 0 0 50px #0f0, 0 0 50px #0f0, 0 0 150px #0f0, 0 0 200px #0f0,
+    0 0 250px #0f0;
+  animation: logoAnimate 2s linear infinite;
+}
+@keyframes logoAnimate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* for small screen mobiles */
+@media (max-width: 320px) {
+  nav {
+    padding: 0 0.5rem;
+  }
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav ul li {
+    margin: auto;
+  }
+}
+/* for small screen mobiles */
+
+/*               New navbar stuff           */
+/*                Background css                    */
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: rgb(19, 19, 19);
+  color: #fff;
+}
+/* font-family: "Permanent Marker", cursive;
+  font-weight: 500;
+
+
+/*                Background Css                     */
+/* xxxxxxxxxxxxxxxxxxxxx Main Program xxxxxxxxxxxxxxxx */
+h1 {
+  text-align: center;
+  color: white;
+  font-size: large;
+  margin: 1rem;
+}
+textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 200px;
+  width: 98%;
+  border: 1px solid #ccc;
+  font-size: medium;
+  padding: 5px;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  margin: 2rem auto;
+  display: block;
+  padding: 4px 3px;
+  border: 2px solid #1b1b1b;
+}
+.logo {
+  color: #fff;
+  text-shadow: 0 0 50px #0f0, 0 0 50px #0f0, 0 0 150px #0f0, 0 0 200px #0f0,
+    0 0 250px #0f0;
+  animation: logoAnimate 2s linear infinite;
+}
+@keyframes logoAnimate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.SuperScript {
+  text-align: center;
+  padding: 2rem;
+}
+/* xxxxxxxxxxxxxxxxxxxxx Main Program xxxxxxxxxxxxxxxx */
+hr {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(255, 251, 251, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+#footer {
+  text-align: center;
+}
