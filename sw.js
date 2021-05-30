@@ -1,4 +1,4 @@
-const cacheName = 'toolxd-v1';
+const cacheName = 'toolxd-v2';
 const staticAssets = [
     '/',
     '/index.html',
@@ -41,22 +41,22 @@ self.addEventListener('fetch', (e) => {
   })());
 });
 
-//fix it
-// staticAssets.push('Pages/Privacy-Policy.html');
-// staticAssets.push('Pages/Cookie-Policy.html');
+fix it
+staticAssets.push('Pages/Privacy-Policy.html');
+staticAssets.push('Pages/Cookie-Policy.html');
 
-// self.addEventListener('install', (e) => {
-//   e.waitUntil((async () => {
-//     const cache = await caches.open(cacheName);
-//     await cache.addAll(staticAssets);
-//   })());
-// });
+self.addEventListener('install', (e) => {
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    await cache.addAll(staticAssets);
+  })());
+});
 
-// self.addEventListener('activate', (e) => {
-//   e.waitUntil(caches.keys().then((keyList) => {
-//     Promise.all(keyList.map((key) => {
-//       if (key === cacheName) { return; }
-//       caches.delete(key);
-//     }))
-//   }));
-// });
+self.addEventListener('activate', (e) => {
+  e.waitUntil(caches.keys().then((keyList) => {
+    Promise.all(keyList.map((key) => {
+      if (key === cacheName) { return; }
+      caches.delete(key);
+    }))
+  }));
+});
