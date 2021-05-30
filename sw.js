@@ -41,7 +41,7 @@ self.addEventListener('fetch', (e) => {
   })());
 });
 
-fix it
+//fix it
 staticAssets.push('Pages/Privacy-Policy.html');
 staticAssets.push('Pages/Cookie-Policy.html');
 
